@@ -1,0 +1,126 @@
+ 1. Jenkins Tasks
+Focus: CI/CD pipeline setup, branch-based builds, post-build actions
+
+Task 1: Create a Jenkins pipeline that:
+
+Pulls code from a Git branch (feature-branch)
+
+Runs a shell script that creates a file and commits it back with the message mergecommit
+
+Merges this branch into master automatically (using a script or webhook)
+
+Task 2: Create a new pipeline for a branch rebasebranch:
+
+Trigger on push
+
+Run a shell step that rebases it onto master
+
+Send a Slack notification if rebase is successful
+
+🔧 2. Ansible Tasks
+Focus: Playbook creation, remote execution, version control
+
+Task 1: Write a playbook that:
+
+Clones a Git repo
+
+Creates a new branch (feature-branch)
+
+Adds a file and commits with the message mergecommit
+
+Merges into master and pushes changes
+
+Task 2: Create a playbook that:
+
+Checks out rebasebranch
+
+Performs a git rebase onto master
+
+Resolves conflicts (mocked)
+
+Sends a status report to the control node
+
+🐳 3. Docker Tasks
+Focus: Image creation, container lifecycle, versioning
+
+Task 1: Create a Dockerfile that:
+
+Copies a Git repo into the image
+
+Runs a shell script inside the container that:
+
+Creates a branch, adds a file, and commits with mergecommit
+
+Merges into master
+
+Task 2: Create and run a container that:
+
+Checks out a branch rebasebranch
+
+Rebases it onto master
+
+Outputs the Git history before and after rebase
+
+☸️ 4. Kubernetes (k8s) Tasks
+Focus: Deployment, config management, CI/CD integrations
+
+Task 1: Create a Deployment manifest that:
+
+Pulls from a Git repo
+
+Initializes a container that performs:
+
+Git branching, file creation, and merging into master
+
+Task 2: Create a Kubernetes Job that:
+
+Runs a Git rebase of rebasebranch onto master
+
+Stores logs in a persistent volume
+
+Sends result to a webhook endpoint (e.g., Slack or Jenkins)
+
+☁️ 5. AWS Tasks
+Focus: CodeCommit, CodeBuild, CodePipeline, EC2 automation
+
+Task 1: Use AWS CodeCommit & CodeBuild:
+
+Create a feature-branch, add a file, commit with mergecommit
+
+Merge into master via CodePipeline approval stage
+
+Task 2: Rebase Workflow:
+
+Create a rebasebranch in CodeCommit
+
+Use a CodeBuild project to:
+
+Clone repo
+
+Rebase onto master
+
+Push changes if rebase is successful
+
+Notify via SNS
+
+🌍 6. Terraform Tasks
+Focus: Infrastructure as Code (IaC), automation, GitOps
+
+Task 1: Terraform GitOps Pipeline:
+
+Clone infra repo in a CI runner
+
+Checkout feature-branch
+
+Add a .tf file, commit with mergecommit, and merge to master
+
+Apply terraform plan and store plan output
+
+Task 2: Git Rebase in Terraform Workflow:
+
+Checkout rebasebranch, rebase onto master
+
+After successful rebase, run terraform apply
+
+Create a backend config (e.g., S3 for state)
+
