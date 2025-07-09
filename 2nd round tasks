@@ -1,0 +1,106 @@
+ Jenkins
+Task 3:
+Create a multibranch pipeline that:
+
+Detects any new branch pushed to Git
+
+Runs unit tests (mocked), then deletes the branch if tests pass
+
+Task 4:
+Create a Jenkinsfile that:
+
+Pulls Dockerfile from repo
+
+Builds and pushes the image to DockerHub
+
+Deploys to Kubernetes using kubectl apply
+
+🧩 Ansible
+Task 3:
+Write a playbook that:
+
+Installs Docker on a remote server
+
+Pulls a Git repo, builds a Docker image, and runs a container
+
+Task 4:
+Configure a zero-downtime deployment with Ansible:
+
+Spin up a new version of an app
+
+Redirect traffic using Nginx
+
+Terminate the old version only after success
+
+🐳 Docker
+Task 3:
+Create a multi-stage Dockerfile:
+
+First stage: build a Python or Node.js app
+
+Second stage: run only the production code
+
+Push the image to DockerHub with version tags
+
+Task 4:
+Create a docker-compose.yml that:
+
+Spins up an app, a Redis container, and a PostgreSQL container
+
+Exposes the app via Nginx reverse proxy
+
+☸️ Kubernetes
+Task 3:
+Deploy an app with:
+
+A Deployment and Service
+
+ConfigMaps for environment variables
+
+Horizontal Pod Autoscaler based on CPU usage
+
+Task 4:
+Create a CI/CD pipeline (Jenkins/GitLab CI) that:
+
+On push to main, builds a Docker image
+
+Pushes it to a registry
+
+Deploys it to Kubernetes using kubectl
+
+☁️ AWS
+Task 3:
+Use AWS CLI + EC2 + Ansible to:
+
+Spin up an EC2 instance
+
+Use Ansible to install and configure Nginx
+
+Serve a static site from /var/www/html
+
+Task 4:
+Use Terraform + AWS to:
+
+Create an S3 bucket for static hosting
+
+Upload an index.html page
+
+Output the website endpoint
+
+🌍 Terraform
+Task 3:
+Create a Terraform module to:
+
+Deploy a VPC with public and private subnets
+
+Attach a NAT Gateway for internet access from private subnet
+
+Task 4:
+Use Terraform to:
+
+Deploy an EC2 instance and a security group
+
+Add user_data to install Docker and start a container on boot
+
+Output the public IP
+
